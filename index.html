@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VibeCode — Sample Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Simple sample website using HTML, CSS and JavaScript" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">VibeCode</h1>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Sample Website — Clean & Lightweight</h2>
+        <p>A simple website using HTML, CSS and JavaScript to demonstrate a basic layout and light interactions.</p>
+        <div class="hero-actions">
+          <button id="learn-btn">Learn</button>
+          <a class="btn-outline" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h3>Features</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>Lightweight Design</h4>
+          <p>Minimal, responsive design suitable for mobile and desktop.</p>
+        </article>
+        <article class="card">
+          <h4>Interactions</h4>
+          <p>Buttons, form and theme switching implemented with JavaScript.</p>
+        </article>
+        <article class="card">
+          <h4>Easy to Customize</h4>
+          <p>Clear code so you can extend or use it as a template.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="container gallery">
+      <h3>Gallery</h3>
+      <p>Drop your photos into the <code>imagines/</code> folder. Files named <code>photo1.jpg</code>...<code>photo6.jpg</code> will appear here. You can change filenames in the HTML.</p>
+      <div class="gallery-grid">
+        <img src="imagines/photo1.jpg" alt="Photo 1" loading="lazy" />
+        <img src="imagines/photo2.jpg" alt="Photo 2" loading="lazy" />
+        <img src="imagines/photo3.jpg" alt="Photo 3" loading="lazy" />
+        <img src="imagines/photo4.jpg" alt="Photo 4" loading="lazy" />
+        <img src="imagines/photo5.jpg" alt="Photo 5" loading="lazy" />
+        <img src="imagines/photo6.jpg" alt="Photo 6" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <form id="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" id="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" id="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" id="message" rows="5" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit">Send</button>
+          <button type="button" id="reset-btn" class="btn-outline">Reset</button>
+        </div>
+      </form>
+      <div id="form-result" class="form-result" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> VibeCode — Sample Website</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
